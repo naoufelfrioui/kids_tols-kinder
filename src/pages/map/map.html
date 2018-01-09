@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-navbar color="danger">
+        <!--<ion-buttons menuToggle start>
+            <button ion-button> <ion-icon name="menu" ></ion-icon></button>
+        </ion-buttons>-->
+        <ion-title>MiSSiONMATE </ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="Suche()" (click)="toggle()"> <ion-icon name="search" ></ion-icon></button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button ion-button (click)="loadMap()">  <ion-icon name="locate"></ion-icon></button>
+        </ion-buttons>
+
+
+        <ion-searchbar [hidden]="!visible" [(ngModel)]="Destination" [showCancelButton]="shouldShowCancel" (ionoutput)="onInput($event)" (ionClear)="Suche()">
+        </ion-searchbar>
+    </ion-navbar>
+</ion-header>
+<ion-content padding color="light">
+
+    <ion-fab bottom left>
+        <button ion-fab color="boton"><ion-icon name="add"></ion-icon></button>
+        <ion-fab-list side="right">
+            <button ion-fab (click)="addPoly()"><img src="assets/icon/map.jpg"/></button>
+            <button ion-fab (click)="undoLastMarker()"> <ion-icon name="trash"></ion-icon></button>
+
+        </ion-fab-list>
+        <ion-fab-list side="top">
+            <button ion-fab (click)="Feuerwehr()"><img src="assets/icon/feuer.png"/></button>
+            <button ion-fab (click)="Polizei()"><img src="assets/icon/Polizei.png"/></button>
+            <button ion-fab (click)="Rettungsdienst()"><img src="assets/icon/Rettungsdienst.png"/></button>
+            <button ion-fab (click)="THW()"><img src="assets/icon/THW.png"/></button>
+        </ion-fab-list>
+    </ion-fab>
+
+    <ion-fab bottom right>
+        <button width="50" height="50" ion-fab><img src="http://hildebrandt-wohnservice.com/content/services/logo_szenario-frisoere.png"/></button>
+        <ion-fab-list side="top">
+            <button ion-fab (click)="SzenarioSpeichern()"><img src="assets/icon/save-512.png"  ></button>
+            <button ion-fab (click)="presentModal()"><ion-icon name="add" ></ion-icon></button>
+
+        </ion-fab-list>
+        <ion-fab-list side="left">
+            <button ion-fab (click)="SzenarioModel()">  <ion-icon name="eye"></ion-icon></button>
+        </ion-fab-list>
+    </ion-fab>
+    <div #map id="map"></div>
+</ion-content>

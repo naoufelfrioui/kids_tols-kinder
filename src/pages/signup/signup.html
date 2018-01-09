@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-navbar color="danger">
+
+        <ion-title>MiSSiONMATE </ion-title>
+
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding style="background-image:url('https://authentication.missionmate.team/resources/images/Startbild.jpg');
+background-repeat : no-repeat;background-size:100% 100%">
+    <div text-center class="logo">
+        <img src="assets/missionmatelogo.svg" />
+    </div>
+
+
+
+    <form (submit)="signup()">
+        <p *ngIf="error" style="text-align: center">{{error.message}}</p>
+        <ion-list>
+
+            <ion-item>
+                <ion-label floating>Username</ion-label>
+                <ion-input type="text" [(ngModel)]="userDetails.username" autocorrect="off" autocapitalize="none" name="username"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>Email</ion-label>
+                <ion-input type="email" [(ngModel)]="userDetails.email" name="email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label floating>Password</ion-label>
+                <ion-input type="password" [(ngModel)]="userDetails.password" name="password"></ion-input>
+            </ion-item>
+
+            <div padding>
+                <button ion-button color="boton" block>Register</button>
+            </div>
+
+            <div padding text-center>
+                <h3>
+                    <p><a (click)="login()">Return to login</a></p>
+                </h3>
+            </div>
+
+        </ion-list>
+    </form>
+</ion-content>

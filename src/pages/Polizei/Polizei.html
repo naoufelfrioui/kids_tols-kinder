@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar color="danger">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-buttons end>
+            <button ion-button (click)="modelclose()">
+                <ion-icon ios="ios-close" md="md-close"></ion-icon></button>
+        </ion-buttons>
+        <ion-title>Polizei</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+    <ion-list>
+
+        <ion-item>
+            <button (click)="SelectItem('assets/Polizei/Polizist.png')" item-start>
+        <ion-img  width="50" height="70"  src="assets/Polizei/Polizist.png" ></ion-img>
+      </button>
+            <ion-label item-end>Polizist</ion-label>
+        </ion-item>
+        <ion-item>
+            <button (click)="SelectItem('assets/Polizei/Streifenwagen.png')" item-start> 
+        <ion-img width="50" height="70"    src="assets/Polizei/Streifenwagen.png" >  </ion-img>
+      
+      </button>
+            <ion-label item-end>Streifenwagen</ion-label>
+
+        </ion-item>
+    </ion-list>
+
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-title>
+            Neues Szenario anlagen?
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+           <ion-icon ios="ios-close" md="md-close"></ion-icon>
+      </button>
+        </ion-buttons>
+        <ion-buttons ion-button end>
+            <button ion-button (click)='addSzenario()'><ion-icon ios="ios-film" md="md-film" ></ion-icon></button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label color="primary">Name</ion-label>
+            <ion-input placeholder="Name" [(ngModel)]="SzenarioName"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>Notizieren</ion-label>
+            <ion-input type="text" placeholder="Notizieren"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-textarea placeholder="Enter a description"></ion-textarea>
+        </ion-item>
+    </ion-list>
+</ion-content>

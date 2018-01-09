@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar color="danger">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-buttons end>
+            <button ion-button (click)="modelclose()">
+                <ion-icon ios="ios-close" md="md-close"></ion-icon></button>
+        </ion-buttons>
+        <ion-title>Mein Szenario</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="Feuerwehr">
+
+    <ion-list>
+        <button ion-item *ngFor="let item of groceries" (click)="SelectItem(item)"> 
+      {{item.title}} 
+    </button>
+    </ion-list>
+    <ion-item-options>
+        <button ion-button color="danger">DELETE</button>
+    </ion-item-options>
+</ion-content>

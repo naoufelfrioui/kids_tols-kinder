@@ -1,0 +1,74 @@
+<ion-header>
+    <ion-navbar color="danger">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-buttons end>
+            <button ion-button (click)="modelclose()"><ion-icon ios="ios-close" md="md-close"></ion-icon></button>
+        </ion-buttons>
+        <ion-title>Feuerwehr</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding class="Feuerwehr">
+    <ion-list color="light">
+
+        <ion-item>
+            <button color="light" (click)="SelectItem('assets/Feuerwehr/Boot mit Trailer.png')" item-start>
+        <ion-img width="50" height="70"    src="assets/Feuerwehr/Boot mit Trailer.png" item-start></ion-img>
+      </button>
+            <ion-label item-end>Boot mit Trailer</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <button color="light" (click)="SelectItem('assets/Feuerwehr/Drehleiterfahrzeug.png')" item-start>
+        <ion-img width="50" height="70"    src="assets/Feuerwehr/Drehleiterfahrzeug.png" ></ion-img>
+      </button>
+            <ion-label item-end>Drehleiterfahrzeug</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <button color="light" (click)="SelectItem('assets/Feuerwehr/Einsatzleitwagen.png')" item-start>
+        <ion-img width="50" height="70"      src="assets/Feuerwehr/Einsatzleitwagen.png" ></ion-img>
+      </button>
+            <ion-label item-end>Einsatzleitwagen</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <button color="light" (click)="SelectItem('assets/Feuerwehr/FeuerwehrGruppenFuehrer.png')" item-start>
+        <ion-img width="50" height="70"      src="assets/Feuerwehr/FeuerwehrGruppenFuehrer.png" ></ion-img>
+      </button>
+            <ion-label item-end>Feuerwehr Gruppen Fuehrer</ion-label>
+        </ion-item>
+
+    </ion-list>
+
+
+    <ion-col class="Right" col-5>
+        <ion-list>
+            <ion-item>
+                <button color="light" (click)="SelectItem('assets/Feuerwehr/Hubschrauber.png')" item-start>
+        <ion-img width="50" height="70"     src="assets/Feuerwehr/Hubschrauber.png" ></ion-img>
+      </button>
+                <ion-label item-end>Hubschrauber</ion-label>
+            </ion-item>
+            <ion-item>
+                <button color="light" (click)="SelectItem('assets/Feuerwehr/Löschgruppenfahrzeug.png')" item-start>
+        <ion-img width="50" height="70"    src="assets/Feuerwehr/Löschgruppenfahrzeug.png" ></ion-img>
+      </button>
+                <ion-label item-end>Löschgruppenfahrzeug</ion-label>
+            </ion-item>
+            <ion-item>
+                <button color="light" (click)="SelectItem('assets/Feuerwehr/TruppFuehrer.png')" item-start>
+        <ion-img width="50" height="70"      src="assets/Feuerwehr/TruppFuehrer.png" ></ion-img>
+      </button>
+                <ion-label item-end>TruppFuehrer</ion-label>
+            </ion-item>
+            <ion-item>
+                <button color="light" (click)="SelectItem('assets/Feuerwehr/TruppMann.png')" item-start>
+        <ion-img width="50" height="70"      src="assets/Feuerwehr/TruppMann.png" ></ion-img>
+      </button>
+                <ion-label item-end>TruppMann</ion-label>
+            </ion-item>
+        </ion-list>
+    </ion-col>
+</ion-content>
